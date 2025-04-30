@@ -6,6 +6,6 @@ router = DefaultRouter()
 router.register(r'documents', DocumentViewSet)
 
 urlpatterns = [
-    path('api/users/<int:id>/login/', LoginView.as_view(), name='login'),
-    path('api/', include(router.urls)),
+    path('users/<int:id>/login/', LoginView.as_view(), name='login'),
+    path('', include(router.urls)),
 ]
